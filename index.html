@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Majeau's plataform game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="imagex/png" href="img/player.png">
+</head>
+<body>
+<div id="hud">
+  <div id="score">Score: 0</div>
+  <button id="btn-portfolio">Portifolio</button>
+  <label for="volume-control" style="color: rgb(255, 255, 255); margin-left: 10px;">Volume:</label>
+  <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.3" />
+</div>
+<div id="milestone" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: rgb(87, 149, 190);
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  border-radius: 20px;
+  z-index: 9999;
+  text-shadow: 2px 2px 4px black;
+">
+  SWEET!
+</div>
+<div id="game-complete" >
+  <p>Congratulations! You beat the GOTY!</p>
+  <button id="play-again-btn" style="margin:10px; padding:10px 20px; font-size:20px;">Play again</button>
+  <button id="back-portfolio-btn" style="margin:10px; padding:10px 20px; font-size:20px;">Return to portfólio</button>
+</div>
+
+
+
+<div id="game-over" style="display:none;">
+  <div id="game-over-content">
+    <h2>You dead!</h2>
+    <p id="final-score">Your score: 0</p>
+    <button id="restart-btn">Try again</button>
+    <button id="portfolio-btn">Return to Portfolio</button>
+  </div>
+</div>
+
+
+  <div class="game">
+    <div id="player"></div>
+    <div id="ground"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
